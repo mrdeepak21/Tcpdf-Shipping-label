@@ -33,16 +33,17 @@ require_once('vendor/tcpdf.php');
  // Page footer
  class MYPDF extends TCPDF {
     public function Footer() {
-        $y=288;$x=275;
+        $y=287;$x=271;
        // Page number
        $this->setFont('','',10);
-       $this->setY(-22);
+       $this->setY(-24);
        $this->Line(0, $x, 250, $x);
        $this->Cell(0, 0, 'Shipped By (If undelivered , return to)', 0, 1, 'L', 0, '', 0, false, 'T', 'M');
        $this->Cell(0, 0, 'BAPS Swaminarayan Mandir, 2nd Floor, Pramukhswami Maharaj Marg, Datta Mandir Rd, next to Sharda high school, Malad East,', 0, 1, 'L', 0, '', 0, false, 'T', 'M');
        $this->Cell(0, 0, 'Mumbai, Maharashtra - 400097 Customer Care: 18008900990', 0, 1, 'L', 0, '', 0, false, 'T', 'M');
-       $this->Line(0, $y, 250, $y);
        $this->setFont('','',8);
+       $this->Line(0, $y, 250, $y);
+       $this->setY(-10);
        $this->Cell(0, 0, 'THIS IS AN AUTO-GENERATED LABEL AND DOES NOT NEED SIGNATURE', 0, 1, 'C', 0, '', 0, false, 'T', 'M');
        $this->Cell(0, 0, 'Page '.$this->getAliasNumPage().' of '.$this->getAliasNbPages(), 0, false, 'R', 0, '', 0, false, 'T', 'M');
    }
@@ -143,8 +144,6 @@ $html = '
 </tr>
 </table>';
 
-// echo $html;
-// exit;
 
 // Print text using writeHTMLCell()
 // $pdf->writeHTMLCell(0, 0, '', '', $html, 0, 1, 0, true, '', true);
