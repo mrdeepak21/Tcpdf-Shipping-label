@@ -106,7 +106,7 @@ function printBarcode($code,$x,$y)
         'bgcolor' => false, //array(255,255,255),
         'text' => false,
     );
-$barcode = $pdf->write1DBarcode($code, 'C39+', $x, $y, 100, 14, 0.4, $style, 'C');
+$barcode = $pdf->write1DBarcode($code, 'C39', $x, $y, 100, 14, 0.4, $style, 'C'); //C128
 }
 
 // Set some content to print

@@ -18,11 +18,11 @@ if(is_user_logged_in()){ ?>
     <div class="container d-flex flex-column align-items-center justify-content-center">
         <img src="logo.png" class="d-block" alt="" srcset="">
         <h2 class="h4 text-center text-capitalize">Enter Details for Shipping Label</h2>
-    <form action="pdf.php" target="_blank" method="post" class="d-flex flex-column">
+    <form action="shipping-label.php" target="_blank" method="post" class="d-flex flex-column">
         <label for="order_number" class="pb-3">Order number
         <input type="number" name="order_number" id="order_number" class="form-control" required></label>
         <label for="weight" class="pb-3"> Weight of the box
-        <input type="number" name="weight" id="weight" class="form-control" required>
+        <input type="number" step="any" name="weight" id="weight" class="form-control" required>
     </label>
         <button class="btn btn-primary" type="submit"><i class="bi bi-file-earmark-pdf"></i> Print</button>
         </form>
